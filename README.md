@@ -5,8 +5,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 ## Table of contents
 
 - [Overview](#overview)
+  - [Features](#features)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -47,14 +47,10 @@ Users should be able to:
   - The email address is not formatted correctly
   - A step is submitted, but no selection has been made
 
-### Screenshot
-
-![](./)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/Kauannyalencar/multi-step-form)
+- Live Site URL: (https://multi-step-form-three-mocha.vercel.app/)
 
 
 ### Built with
