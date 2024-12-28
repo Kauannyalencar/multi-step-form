@@ -50,7 +50,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/Kauannyalencar/multi-step-form)
-- Live Site URL: ([https://your-live-site-url.com](https://multi-step-form-three-mocha.vercel.app/))
+- Live Site URL: (https://multi-step-form-three-mocha.vercel.app/)
 
 
 ### Built with
