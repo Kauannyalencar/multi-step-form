@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Kauannyalencar/multi-step-form)
+- Live Site URL: ([https://your-live-site-url.com](https://multi-step-form-three-mocha.vercel.app/))
 
 
 ### Built with
