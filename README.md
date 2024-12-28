@@ -5,8 +5,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 ## Table of contents
 
 - [Overview](#overview)
+  - [Features](#features)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -46,10 +46,6 @@ Users should be able to:
   - A field has been missed
   - The email address is not formatted correctly
   - A step is submitted, but no selection has been made
-
-### Screenshot
-
-![](./)
 
 ### Links
 
