@@ -134,6 +134,17 @@
             padding: 10px;
             align-items: center;
         }
+        .change-step{
+            left: 0;
+            padding: 25px;
+            width: 100vw;
+            background-color: $white;
+            height: 40px;
+        }
+
+        .next-step{
+            right: 15px;
+        }
     }
 
 }
