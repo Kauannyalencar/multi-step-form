@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <aside class="side-bar">
+      <div class="bar-step">
+        <span data-step="1" class="number active">1</span>
+        <div class="step-info">
+          <span class="step"> Step 1</span>
+          <h3>Your info</h3>
+        </div>
+      </div>
+      <div class="bar-step">
+        <span data-step="2" class="number">2</span>
+        <div class="step-info">
+          <span class="step"> Step 2</span>
+          <h3>Select plan</h3>
+        </div>
+      </div>
+      <div class="bar-step">
+        <span data-step="3" class="number">3</span>
+        <div class="step-info">
+          <span class="step"> Step 3</span>
+          <h3> Add-ons </h3>
+        </div>
+      </div>
+      <div class="bar-step">
+        <span data-step="4" class="number">4</span>
+        <div class="step-info">
+          <span class="step"> Step 4</span>
+          <h3> Summary</h3>
+        </div>
+      </div>
+    </aside>
+    <main class="container">
+      <section data-step="1" class="personal-info section-step  ">
+        <div class="section-header">
+          <h1 class="step-title"> Personal info
+          </h1>
+          <p class="step-info"> Please provide your name, email address, and phone number.
+          </p>
+        </div>
+        <form id="form">
+          <div class="name-field input-field">
+            <label for="nome">Name</label>
+            <input type="text" id="nome" placeholder="e.g. Stephen King" required>
+            <span id="nome-error" class="error-span hidden">This field is required</span>
+          </div>
+          <div class="email-field input-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+            <span id="email-error" class="error-span hidden">This field is required</span>
+          </div>
+          <div class="phone-field input-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" placeholder=" e.g. +1 234 567 890">
+            <span id="phoneNumber-error" class="error-span hidden">This field is required</span>
+          </div>
+        </form>
+        <div class="change-step">
+          <button class="next-step section-btn"> Next Step</button>
+        </div>
+      </section>
+      <section data-step="2" class="select-plan section-step hidden">
+        <div class="section-header">
+          <h1 class="step-title">Select your plan</h1>
+          <p class="step-info"> You have the option of monthly or yearly billing.</p>
+        </div>
+        <div class="plans monthly">
+          <div class="plans-categories">
+            <div class="plan-category">
+              <div class="arcade">
+                <img src="assets/images/icon-arcade.svg" alt="">
+                <div class="plan-descrition">
+                  <h3>Arcade</h3>
+                  <span class="plan-price"> $9/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan-category">
+              <div class="advanced">
+                <img src="assets/images/icon-advanced.svg" alt="">
+                <div class="plan-descrition">
+                  <h3>Advanced</h3>
+                  <span class="plan-category-price">$12/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan-category">
+              <div class="pro">
+                <img src="assets/images/icon-pro.svg" alt="">
+                <div class="plan-descrition">
+                  <h3>Pro</h3>
+                  <span class="plan-category-price">$15/mo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="plans yearly hidden
+          ">
+          <div class="plans-categories">
+            <div class="plan-category">
+              <div class="arcade">
+                <img src="assets/images/icon-arcade.svg" alt="">
+                <div class="plan-descrition">
+                  <h3>Arcade</h3>
+                  <span class="plan-price"> $90/yr</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan-category">
+              <div class="advanced">
+                <img src="assets/images/icon-advanced.svg" alt="">
+                <div class="plan-descrition">
+                  <h3>Advanced</h3>
+                  <span class="plan-category-price">$120/yr</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan-category">
+              <div class="pro">
+                <img src="assets/images/icon-pro.svg" alt="">
+                <div class="plan-descrition">
+                  <h3>Pro</h3>
+                  <span class="plan-category-price">$150/yr</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="plan-period">
+          <span class="active">Monthly</span>
+          <div class="btn-box ">
+            <div class="btn-change-plan monthly"></div>
+          </div>
+          <span>Yearly</span>
+        </div>
+        <div class="change-step">
+          <button class="back-step section-btn"> Go Back </button>
+          <button class="next-step section-btn"> Next Step</button>
+        </div>
+
+      </section>
+      <section data-step="3" class="pick-add-ons section-step hidden ">
+        <div class="section-header">
+          <h1 class="step-title"> Pick add-ons </h1>
+          <p class="step-info">
+            Add-ons help enhance your gaming experience.
+          </p>
+        </div>
+        <div class="add-ons">
+          <ul class="monthly-add-ons">
+            <li class="add-on">
+              <label>
+                <div class="on">
+                  <div class="wrapper">
+                    <input type="checkbox" id="online-service" class="checkbox">
+                    <span class="check-btn"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="on-description">
+                    <h3>Online Service</h3>
+                    <span>Access to multiplayer games</span>
+                  </div>
+                </div>
+              </label>
+              <div class="on-price">
+                <p> +$1/mo</p>
+              </div>
+            </li>
+            <li class="add-on">
+              <label>
+                <div class="on">
+                  <div class="wrapper">
+                    <input type="checkbox" id="large-storage" class="checkbox">
+                    <span class="check-btn"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="on-description">
+                    <h3>Larger storage</h3>
+                    <span>Extra 1TB of cloud save</span>
+                  </div>
+                </div>
+              </label>
+              <div class="on-price">
+                <p> +$2mo</p>
+              </div>
+            </li>
+            <li class="add-on">
+              <label>
+                <div class="on">
+                  <div class="wrapper">
+                    <input type="checkbox" id="customizable-profile" class="checkbox">
+                    <span class="check-btn"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="on-description">
+                    <h3>Customizable Profile</h3>
+                    <span>Custom theme on your profile</span>
+                  </div>
+                </div>
+              </label>,
+              <div class="on-price">
+                <p> +$2/mo</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="yearly-add-ons hidden">
+            <li class="add-on">
+              <label>
+                <div class="on">
+                  <div class="wrapper">
+                    <input type="checkbox" id="online-service" class="checkbox">
+                    <span class="check-btn"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="on-description">
+                    <h3>Online Service</h3>
+                    <span>Access to multiplayer games</span>
+                  </div>
+                </div>
+              </label>
+              <div class="on-price">
+                <p> +$10/yr</p>
+              </div>
+            </li>
+            <li class="add-on">
+              <label>
+                <div class="on">
+                  <div class="wrapper">
+                    <input type="checkbox" id="large-storage" class="checkbox">
+                    <span class="check-btn"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="on-description">
+                    <h3>Larger storage</h3>
+                    <span>Extra 1TB of cloud save</span>
+                  </div>
+                </div>
+              </label>
+              <div class="on-price">
+                <p> +$20/yr</p>
+              </div>
+            </li>
+            <li class="add-on">
+              <label>
+                <div class="on">
+                  <div class="wrapper">
+                    <input type="checkbox" id="customizable-profile" class="checkbox">
+                    <span class="check-btn"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="on-description">
+                    <h3>Customizable Profile</h3>
+                    <span>Custom theme on your profile</span>
+                  </div>
+                </div>
+              </label>,
+              <div class="on-price">
+                <p> +$20/yr</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="change-step">
+          <button class="back-step"> Go Back </button>
+          <button class="next-step section-btn"> Next Step</button>
+        </div>
+      </section>
+      <section data-step="4" class="finish section-step hidden">
+        <div class="section-header">
+          <h3 class="step-title"> Finishing up</h3>
+          <p class="step-info"> Double-check everything looks OK before confirming.</p>
+        </div>
+        <div class="plan-summary">
+          <!-- add o plano e suas options -->
+          <div class="choose-plan">
+            <div class="plan-type">
+              
+              <div class="plan-features">
+                <h3 class="current-plan-title"><span class="current-plan-period"></span></h3>
+                <span class="change-plan">Change</span>
+              </div>
+              <div class="plan-price">
+                <span class="current-plan-price"></span>
+              </div>
+
+            </div>
+            <div class="current-ons"></div>
+          </div>
+        </div>
+        <div class="total">
+          <p>Total
+            <span class="plan-month-or-year"></span>
+          </p>
+          <span class="total-per-period"></span>
+        </div>
+        <div class="change-step">
+          <button class="back-step"> Go Back </button>
+          <button id="confirm-btn" class="confirm-btn"> Confirm
+          </button>
+        </div>
+      </section>
+      <section class="end section-step hidden">
+        <img src="assets/images/icon-thank-you.svg" alt="">
+        <h1>
+          Thank you!</h1>
+        <p> Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.</p>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+@use '../css/colors.scss' as *;
+
+.personal-info {
+    // display: block;
+}
+
+
+#form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: $marineBlue;
+
+    input {
+        padding: 10px;
+        color: $marineBlue;
+        font-weight: 600;
+        outline: none;
+        border: 1px solid $lightGray;
+        border-radius: 5px;
+    }
+
+    input:focus {
+        border: 1px solid $purplishBlue ;
+    }
+
+
+  
+    input:invalid + .error-span{
+        display: block;
+    }
+    
+    .invalid {
+        border: 1px solid $strawberryRed;
+    }
+}
+
+.input-field {
+    position: relative;
+}
+
+.error-span {
+    position: absolute;
+    right: 0;
+    // font-weight: 600;
+    font-size: 14px;
+    color: $strawberryRed;
+}
+

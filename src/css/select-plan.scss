@@ -1,0 +1,91 @@
+@use '../css/colors.scss' as *;
+
+.select-plan{
+    // display: block;
+}
+.plans{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.plans-categories {
+    display: flex;
+    gap: 15px;
+
+    .plan-category {
+        height: 150px;
+        width: 140px;
+        font-size: 15px;
+        border: 1px solid $lightGray;
+        padding: 15px;
+        border-radius: 10px;
+        &:hover {
+            border-color: $purplishBlue ;
+            
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .plan-descrition{
+                gap: 5px;
+                h3{
+                    color: $marineBlue;
+                }
+
+                span{
+                    color: $coolGray;
+                }
+            }
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+    }
+    .active{
+        background-color: $magnolia;
+        border: 1px solid $purplishBlue;
+    }
+}
+
+.plan-period {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+    justify-content: center;
+    background-color: $alabaster;
+    margin-top: 30px;
+    color: $coolGray;
+    font-weight: 600;
+    span.active{
+        color: $marineBlue;
+    }
+}
+.btn-box {
+    background-color: $marineBlue;
+    width: 40px;
+    height: 22px;
+    position: relative;
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+    .btn-change-plan {
+        position: absolute;
+        bottom: 3px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgb(247, 247, 247);
+        transition: all .2s;
+    }
+
+    .btn-change-plan.btn-change-plan.yearly {
+        right: 5px;
+    }
+}
+

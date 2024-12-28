@@ -1,0 +1,93 @@
+@use '../css/colors.scss' as *;
+
+.pick-add-ons {
+    display: block;
+}
+
+.add-on {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    border: 1px solid $coolGray;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px;
+
+    .on {
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+
+    }
+
+    .on-description {
+
+        h3 {
+            color: $marineBlue;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        span {
+            color: $coolGray;
+        }
+    }
+
+    .on-price {
+        p {
+            font-weight: 600;
+            color: $purplishBlue;
+        }
+    }
+
+    .wrapper {
+        width: 20px;
+        height: 20px;
+        position: relative;
+    }
+
+    .wrapper .checkbox {
+        opacity: 0;
+
+        cursor: pointer;
+        width: 0;
+        height: 0;
+    }
+
+    .check-btn {
+        border: 1px solid $coolGray;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+
+        i {
+            padding: 2px;
+            font-size: 15px;
+            color: $white;
+        }
+    }
+
+    .check-btn::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper input:checked+.check-btn {
+        color: $white;
+        border: none;
+        background-color: $purplishBlue;
+    }
+
+}
+
+.add-on.active {
+    background-color: $magnolia;
+    border: 1px solid $purplishBlue;
+}

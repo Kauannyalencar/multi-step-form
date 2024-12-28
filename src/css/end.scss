@@ -1,0 +1,15 @@
+@use '../css/colors.scss' as *;
+
+.end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    p {
+        text-align: center;
+        font-size: 15px;
+        line-height: 22px;
+    }
+}

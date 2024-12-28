@@ -1,0 +1,161 @@
+@use '../css/colors.scss' as *;
+@use '../css/fonts.scss' as *;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightGray;
+    height: 100vh;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(250px, 25%) auto;
+    margin: auto;
+    max-width: 800px;
+    width: 80%;
+    padding: 10px 10px 10px 20px;
+    background-color: $white;
+    font-family: "Ubuntu";
+    border-radius: 10px;
+    height: 82vh;
+}
+
+
+.side-bar::before {
+    content: "";
+    background: url(../assets/images/bg-sidebar-desktop.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 10px;
+    z-index: -1;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+
+    .bar-step {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        text-transform: uppercase;
+        color: $white;
+
+        h3 {
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 2px;
+            opacity: .9
+        }
+
+        .step {
+            color: $pastelBlue;
+        }
+    }
+
+    .number {
+        border: 1px solid $magnolia;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.number.active {
+    background-color: $lightBlue;
+    color: $marineBlue;
+}
+
+.personal-info,
+.select-plan,
+.pick-add-ons,
+.finish,
+.end {
+    padding: 40px;
+    max-width: 95%;
+    position: relative;
+    height: 100%;
+
+    .section-header {
+        margin-bottom: 30px;
+
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    h1 {
+        color: $marineBlue;
+    }
+
+    p {
+        font-size: 14px;
+        color: $coolGray;
+        opacity: .7;
+    }
+}
+
+.change-step {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    width: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.next-step {
+    background-color: $marineBlue;
+    position: absolute;
+    right: 0;
+    color: $white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #144777;
+    }
+}
+
+.back-step {
+    color: $coolGray;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        color: $marineBlue;
+    }
+}
+
+.hidden {
+    display: none !important;
+}

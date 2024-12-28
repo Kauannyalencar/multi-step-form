@@ -1,0 +1,83 @@
+@use '../css/colors.scss' as *;
+
+.finish {
+    // display: block;
+}
+
+.choose-plan {
+    background-color: $alabaster;
+    padding: 15px 25px;
+    border-radius: 10px;
+
+}
+
+.plan-type {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    color: $marineBlue;
+    font-weight: 600;
+    position: relative;
+    border-bottom: 1px solid $lightGray;
+
+    .plan-features {
+        margin-bottom: 25px;
+
+        h3 {
+            margin-bottom: 10px;
+            color: $marineBlue;
+        }
+
+        .change-plan {
+            color: $coolGray;
+            font-weight: normal;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 600;
+                color: $purplishBlue;
+            }
+        }
+    }
+
+    .plan-price {
+        margin-top: 20px;
+    }
+}
+
+.choose-ons {
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 15px;
+    margin: 15px 0 15px;
+
+    .choose-ons-price {
+        color: $marineBlue;
+    }
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+
+    .total-per-period {
+        font-weight: 600;
+        color: $purplishBlue;
+    }
+}
+
+
+#confirm-btn {
+    background-color: $purplishBlue;
+    color: $white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+        opacity: .8;
+    }
+}
